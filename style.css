@@ -6,12 +6,6 @@
     font-family: 'Rajdhani', sans-serif;
 }
  
-.navbar-custom {
-    height: 60px;
-    font-size: 1.1rem;
-    background-color: #ffffff;
-    letter-spacing: 3px;
-}
 /* change the brand and text color */
 .navbar-custom .navbar-brand {
     color: #000000;
@@ -24,13 +18,16 @@
 
 /* change the color of active or hovered links */
 .nav-item:hover .nav-link {
-    color: #ff7b00;
-    border-bottom:1px solid #ff7b00;
+    color: #ff7b00 !important;
 }
 
+.dropdown-menu .dropdown .dropdown-item{
+    transition: all 0.5s ease-out !important;
+}
 .dropdown .dropdown-item:hover {
     background: none;
     color: #ff7b00;
+
 }
 
 button.navbar-toggler:focus, button.navbar-toggler:active {
@@ -41,3 +38,36 @@ button.navbar-toggler:focus, button.navbar-toggler:active {
 .fa-bars {
     color: #ff7b00;
 }
+
+.container-form {
+    padding: 100px;
+    background: #f878005b;
+}
+
+.form-control:focus {
+    border-color: #ff7b00 !important;
+    box-shadow: 0 0 10px rgba(255, 115, 0, 0.795) !important;
+  }
+
+  .btn-outline {
+    border-color: #ff7b00 !important;
+  }
+
+  .btn-outline:hover {
+    background: #ff7b00 !important;
+    color: white !important;
+  }
+
+  .btn-outline-form {
+    margin-top: 15px;
+    color: #575757 !important;
+    border-color: #ff7b00 !important;
+  }
+
+  .btn-outline-form:hover {
+    background: #ff7b00 !important;
+    color: white !important;
+  }
+
+  
+  
