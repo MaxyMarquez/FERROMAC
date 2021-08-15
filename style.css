@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+}
+ 
+.navbar-custom {
+    height: 60px;
+    font-size: 1.1rem;
+    background-color: #ffffff;
+    letter-spacing: 3px;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand {
+    color: #000000;
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: #000000;
+}
+
+/* change the color of active or hovered links */
+.nav-item:hover .nav-link {
+    color: #ff7b00;
+    border-bottom:1px solid #ff7b00;
+}
+
+.dropdown .dropdown-item:hover {
+    background: none;
+    color: #ff7b00;
+}
+
+button.navbar-toggler:focus, button.navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.fa-bars {
+    color: #ff7b00;
+}
