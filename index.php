@@ -1,16 +1,39 @@
 <?php
-$nombre = $ _POST['name'];
-$email = $ _POST['email'];
-$mensaje = $ _POST['message'];
-$para = 'maxy.marquez@hotmail.com';
-$titulo = 'Hola - La Webera';
- 
-$msjCorreo = "Nombre: $nombre\n E-Mail: $email\n Mensaje:\n $mensaje";
- 
-if ($ _POST['submit']) {
-if (mail ($para, $titulo, $msjCorreo)) {
-echo 'El mensaje se ha enviado';
+
+if ($_POST['g-recaptcha-response'] == '') {
+echo "Captcha invalido";
 } else {
-echo 'Falló el envio';
+$obj = new stdClass();
+$obj->secret = "6LeXlJ8UAAAAAB-jEG2M49toqrp0N_GgpApSdVTn";
+$obj->response = $_POST['g-recaptcha-response'];
+$obj->remoteip = $_SERVER['REMOTE_ADDR'];
+$url = 'https://www.google.com/recaptcha/api/siteverify';
+
+$options = array(
+'http' => array(
+'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+'method' => 'POST',
+'content' => http_build_query($obj)
+)
+);
+$context = stream_context_create($options);
+$result = file_get_contents($url, false, $context);
+
+$validar = json_decode($result);
+
+/*  FIN DE CAPTCHA   */
+
+if ($validar->success) {
+$email = trim($_POST['email']);
+$nombre = trim($_POST['name']);
+$apellido = trim($_POST['lastName']);
+$comentario = trim($_POST['message']);
+
+$consulta = "E-mail: " . $email . " Nombre: " . $nombre . " Apellido: " . $apellido . "Comentario: " . $comentario;
+
+mail("maxy.marquez@hotmail.com", "Contacto desde Formulario", $consulta);
+} else {
+echo "Captcha invalido";
 }
 }
+?>
