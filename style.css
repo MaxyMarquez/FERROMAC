@@ -27,7 +27,6 @@
 .dropdown .dropdown-item:hover {
     background: none;
     color: #ff7b00;
-
 }
 
 button.navbar-toggler:focus, button.navbar-toggler:active {
@@ -49,25 +48,49 @@ button.navbar-toggler:focus, button.navbar-toggler:active {
     box-shadow: 0 0 10px rgba(255, 115, 0, 0.795) !important;
   }
 
-  .btn-outline {
+.btn-outline {
+    
     border-color: #ff7b00 !important;
-  }
+}
 
-  .btn-outline:hover {
-    background: #ff7b00 !important;
+.btn-outline:hover {
     color: white !important;
-  }
+}
 
-  .btn-outline-form {
+.btn-outline-form {
+    width: 100% ;
     margin-top: 15px;
+    margin-bottom: 15px;
     color: #575757 !important;
     border-color: #ff7b00 !important;
-  }
+}
 
-  .btn-outline-form:hover {
+.btn-outline-form:hover {
     background: #ff7b00 !important;
     color: white !important;
-  }
+}
+.link-form, .link-form a {
+    font-size: 1.2rem;
+}
+.link-form {
+    align-items: center;
+    justify-content: center;
+    color: #3b3b3b;
+}
+.link-form p {
+    color: #ff7b00;
+    font-size: 1.5rem;
+}
+.link-form a {
+    text-decoration: none;
+    color:#000000
+}
 
-  
-  
+.link-form a:hover {
+    color:#ff7b00;
+}
+
+.social-link {
+    color: #ff7b00;
+    margin-right: 15px ;
+}
