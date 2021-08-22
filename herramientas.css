@@ -15,3 +15,17 @@ section {
   float: none; /* Added */
   margin-bottom: 10px; /* Added */
 }
+
+.container {
+  margin-top: 50px;
+}
+.container-menu {
+  position: sticky;
+  width: 200px;
+  height: 800px;
+  background: orange !important;
+}
+.accordion-item {
+  width: 200px;
+}
+
