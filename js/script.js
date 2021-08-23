@@ -20,3 +20,15 @@ list.forEach(elements => {
         bg.style.backgroundColor = color;
     });
 });
+
+$(document).ready(function () {
+
+    $('.flipWrapper').click(function () {
+
+        $(this).find('.card').toggleClass('flipped');
+
+        return false;
+
+    });
+
+});

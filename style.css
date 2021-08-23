@@ -38,7 +38,111 @@ button.navbar-toggler:focus, button.navbar-toggler:active {
 .fa-bars {
     color: #ff7b00;
 }
+/* ********************************************************************************************************** */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    transform-style: preserve-3d;
+    width: 100%;
+}
+.products .ProductCard {
+    position: relative;
+    width: 280px;
+    height: 300px;
+    margin: 20px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+.products .ProductCard .box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 1s ease;
+}
 
+.products .ProductCard .box.flipped {
+    transform: rotateY(180deg);
+}
+
+.products .card .box .imgBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+}
+
+.products .ProductCard .box .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.products .ProductCard .box .contentBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+}
+
+.products .ProductCard .box .contentBox div {
+    transform-style: preserve-3d;
+    padding: 20px;
+    background: linear-gradient(90deg, rgb(255, 206, 116),rgb(255, 166, 0));
+    transform: translateZ(100px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.products .ProductCard .box .contentBox div h2 {
+    color: #333;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.products .ProductCard .box .contentBox div h2 p {
+    color: #333;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.products .ProductCard .box .contentBox div img {
+    width: 120px;
+    height: 60px;
+    object-fit: cover;
+    
+}
+
+.products .ProductCard .box .contentBox div input {
+    width: 100px;
+    height: 40px;
+    font-size: 1em;
+    font-weight: 500;
+    background: rgb(253, 253, 253);
+    color: #000;
+    border: none;
+}
 /* ********************************************************************************************************** */
 .socialMedia {
     display: flex;
@@ -291,7 +395,7 @@ button.navbar-toggler:focus, button.navbar-toggler:active {
     transform: translate(-50%,calc(-50% + 130px));
     font-size: 14vw;
     pointer-events: none;
-    font-weight: 700;
+    font-weight: 700;|
     transition: 0.5s;
     opacity: 0;
 } */
@@ -350,6 +454,9 @@ button.navbar-toggler:focus, button.navbar-toggler:active {
 .js-tilt-glare {
     border-radius: 10px;
 }
+@media (max-width : 1200px) {
+    
+}
 
 @media (max-width : 990px) {
     .sci li a {
@@ -364,3 +471,59 @@ button.navbar-toggler:focus, button.navbar-toggler:active {
     }
 }
 /* ********************************************************************************************************** */
+
+.flipWrapper {
+    perspective: 1000;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin: 50px auto;
+    }
+    .flipWrapper .card.flipped {
+    transform: rotatey(180deg);
+    }
+    .flipWrapper .card {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    }
+    .flipWrapper .card .face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    z-index: 2;
+    font-family: Georgia;
+    font-size: 3em;
+    text-align: center;
+    line-height: 200px;
+    border: none;
+    }
+    .flipWrapper .card .front {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        z-index: 1;
+        background: rgb(57, 171, 62);
+        color: white;
+        cursor: pointer;
+        border: none;
+
+    }
+    .flipWrapper .card .front img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .flipWrapper .card .back {
+        transform: rotatey(-180deg);
+        background: blue;
+        background: red;
+        color: white;
+        cursor: pointer;
+        border: none;
+    }

@@ -110,37 +110,73 @@
         </div>
     </section>
     <!--  -->
-    <section>
-
-    </section>
-
-    <section>
-        <div class="">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/hamilton/gardex.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/hamilton/24.png" class="d-block w-100" alt="...">
-                    </div>
-
+    <section class="products">
+        <div class="ProductCard">
+            <div class="box">
+                <div class="imgBox">
+                    <img src="img/icon/istockphoto-953458944-612x612.jpg" alt="">
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <div class="contentBox">
+                    <div>
+                        <h2>HERRAMIENTAS</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, tempore.</p>
+                        <img src="img/hamilton/24.png" alt="">
+                        <img src="img/hamilton/gardex.png" alt="">
+                        <input type="button" value="Ver C&aacute;talogo">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ProductCard">
+            <div class="box">
+                <div class="imgBox">
+                    <img src="img/icon/istockphoto-1267583593-170667a.jpg" alt="">
+                </div>
+                <div class="contentBox">
+                    <div>
+                        <h2>HERRAMIENTAS</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, tempore.</p>
+                        <img src="img/hamilton/24.png" alt="">
+                        <img src="img/hamilton/gardex.png" alt="">
+                        <input type="button" value="Ver C&aacute;talogo">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ProductCard">
+            <div class="box">
+                <div class="imgBox">
+                    <img src="img/icon/gas.jpg" alt="">
+                </div>
+                <div class="contentBox">
+                    <div>
+                        <h2>HERRAMIENTAS</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, tempore.</p>
+                        <img src="img/hamilton/24.png" alt="">
+                        <img src="img/hamilton/gardex.png" alt="">
+                        <input type="button" value="Ver C&aacute;talogo">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ProductCard">
+            <div class="box">
+                <div class="imgBox">
+                    <img src="img/icon/electricidad.jpg" alt="">
+                </div>
+                <div class="contentBox">
+                    <div>
+                        <h2>HERRAMIENTAS</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, tempore.</p>
+                        <img src="img/hamilton/24.png" alt="">
+                        <img src="img/hamilton/gardex.png" alt="">
+                        <input type="button" value="Ver C&aacute;talogo">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
-    <!-- Contacto -->
+    <!--------------------Contacto-------------------->
     <section class="socialMedia">
         <div class="container">
             <div class="contactInfo">
@@ -149,7 +185,7 @@
                     <ul class="info">
                         <li>
                             <span><img src="img/icon/location.png" alt=""></span>
-                            <span><a href="">Corrientes 710,<br> Neuquen Capital,<br>Codigo Postal 8300.<br></a> 
+                            <span><a href="">Corrientes 710,<br> Neuquen Capital,<br>Codigo Postal 8300.<br></a>
                             </span>
                         </li>
                         <li>
@@ -210,8 +246,16 @@
     <footer>
 
     </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script src="js/vanilla-tilt.js"></script>
     <script>
+        $(document).ready(function () {
+            $('.ProductCard').click(function () {
+                $(this).find('.box').toggleClass('flipped');
+                return false;
+            });
+        });
+
         VanillaTilt.init(document.querySelectorAll(".sci li a"), {
             max: 30,
             speed: 400,
@@ -230,10 +274,12 @@
                 bg.style.backgroundColor = '#fff';
             });
         });
+
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
-    </script>
+        </script>
 </body>
 
 </html>
